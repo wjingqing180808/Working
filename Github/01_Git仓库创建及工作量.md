@@ -175,6 +175,34 @@ Git支持多种协议，包括https，但通过ssh支持的原生git协议速度
 
 ​	
 
+## 8.标签管理
+
+### 8.1创建标签
+
+```
+#git tag tagname --创建标签
+#git tag -a v0.1 -m "version 0.1 released" 1094adb  --创建带有说明的标签，用-a指定标签名，-m指定说明文字： 1094adb获取git log 获取commit_id
+
+```
+
+
+
+### 8.2操作标签
+
+```
+#git tag -d tagname --删除标签
+#git push origin v1.0 --推送某个标签到远程
+#git push origin --tags --一次性推送全部尚未推送到远程的本地标签
+#git tag -d tagname --如果标签已经推送到远程，要删除远程标签就麻烦一点，先从本地删除
+# git push origin :refs/tags/v0.1 从远程删除。删除命令也是push，但是格式如下
+
+小结：
+命令git push origin <tagname>可以推送一个本地标签；
+命令git push origin --tags可以推送全部未推送过的本地标签；
+命令git tag -d <tagname>可以删除一个本地标签；
+命令git push origin :refs/tags/<tagname>可以删除一个远程标签。
+```
+
 
 
 
