@@ -2,39 +2,32 @@
 
 ## 1.安装
 
+```
 1. 下载window git
-
-   ​	doanload:<https://git-scm.com/downloads>
-
+   #doanload:<https://git-scm.com/downloads>
 2. 配置用户信息
-
    #git config --global user.name "wenjq"	--配置用户
-
    #git config --global user.email "wjingqing168@163.com"	--配置邮箱
-
    #git config --list 	--查看当前配置
+```
 
 ​	
 
 ## 2.git仓库
 
+```
 - 初始化版本库
-
   #git init
-
 - 添加文件到版本库
-
   #git add filename
-
   #git commit -m "create new filename"
-
 - 查看仓库状态
-
   #git status
+```
 
-  
 
-  
+
+
 
 
 
@@ -70,10 +63,10 @@
 
 ## 5.工作区与暂存区
 
+```
 - 工作区:电脑里能看到的目录
 
 - 暂存区:Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支`master`，以及指向`master`的一个指针叫`HEAD`
-
 - 文件往Git版本库添加
 
   第一步是用`git add`把文件添加进去，实际上就是把文件修改添加到暂存区；
@@ -81,10 +74,10 @@
   第二步是用`git commit`提交更改，实际上就是把暂存区的所有内容提交到当前分支。
 
   因为我们创建Git版本库时，Git自动为我们创建了唯一一个`master`分支，所以，现在，`git commit`就是往`master`分支上提交更改。
-
   你可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改
+```
 
-  
+
 
 
 
@@ -193,6 +186,7 @@ Git支持多种协议，包括https，但通过ssh支持的原生git协议速度
 #git tag -d tagname --删除标签
 #git push origin v1.0 --推送某个标签到远程
 #git push origin --tags --一次性推送全部尚未推送到远程的本地标签
+#git tag -a "标签名" -m "备注" --> 指定提交标签
 #git tag -d tagname --如果标签已经推送到远程，要删除远程标签就麻烦一点，先从本地删除
 # git push origin :refs/tags/v0.1 从远程删除。删除命令也是push，但是格式如下
 
